@@ -1,6 +1,5 @@
 <?php
-
-define( 'APP_ENV', 'dev' );
+require_once __DIR__ . '/wp-config-local.php';
 
 // Configuration path
 $config_path = __DIR__ . '/../config/wp-config-' . APP_ENV . '.php';

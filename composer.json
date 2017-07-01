@@ -32,7 +32,9 @@
             "www/content/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
         }
     },
-    "post-install-cmd": [
-        "php scripts/install-configuration.php"
-    ]
+    "scripts": {
+        "post-update-cmd": [
+            "php scripts/install-configuration.php"
+        ]
+    }
 }

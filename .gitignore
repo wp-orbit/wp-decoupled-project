@@ -2,3 +2,4 @@ vendor/
 config/
 composer.lock
 www/wp/
+www/wp-config-local.php
