@@ -10,5 +10,5 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $root_path = __DIR__ . '/../';
 
 // Instantiate the configuration installer.
-$installer = new WP_Orbit\DecoupledConfig\Setup\Install( $root_path );
+$installer = new WPOrbit\DecoupledConfiguration\Setup\Install( $root_path );
 $installer->run();
