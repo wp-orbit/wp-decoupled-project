@@ -1,0 +1,38 @@
+{
+    "name": "wp-orbit/wp-decoupled-project",
+    "description": "A project setup with core WordPress files separated from working project files.",
+    "license": "GPL2+",
+    "authors": [
+        {
+            "name": "Marty Eason",
+            "email": "dev@zawntech.com",
+            "role": "Developer"
+        }
+    ],
+    "repositories":[
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/wp-orbit/wp-decoupled-config"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.3",
+        "johnpbloch/wordpress": "*",
+        "wp-orbit/wp-decoupled-config": "@dev"
+    },
+    "extra": {
+        "wordpress-install-dir": "www/wp",
+        "installer-paths": {
+            "www/content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "www/content/themes/{$name}/": ["type:wordpress-theme"],
+            "www/content/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+        }
+    },
+    "post-install-cmd": [
+        "php scripts/install-configuration.php"
+    ]
+}
